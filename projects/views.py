@@ -24,7 +24,8 @@ class ProfileViewSet(viewsets.ModelViewSet):
             profile = Profile.objects.get(id=kwargs["pk"])
             context = {
                 "profile": profile,
-                "projects": profile.projects.all()
+                "projects": profile.projects.all(),
+                "certificates": profile.certificates.all(),
             }
 
             return render(request, "profile_detail.html", context)

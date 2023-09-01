@@ -18,4 +18,10 @@
             <p>{{ project.key_skill }}</p>
         </section>
     {% endfor %}
+    {% for certificate in certificates %}
+        <div>
+            <h2>{{ certificate.name }}</h2>
+            <p>{{ certificate.certifying_institution }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}
