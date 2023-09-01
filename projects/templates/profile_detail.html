@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Bem vindo!!
+{% endblock %}
+
+{% block content %}
+    <h1>Nome: {{ profile.name }}</h1>
+    <h3>Bio: {{ profile.bio }}</h3>
+    <a href="{{ profile.github }}">GitHub</a>
+    <a href="{{ profile.linkedin }}">LinkedIn</a>
+
+    {% for project in projects %}
+        <section>
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.keyword }}</p>
+            <p>{{ project.description }}</p>
+            <p>{{ project.key_skill }}</p>
+        </section>
+    {% endfor %}
+{% endblock %}
